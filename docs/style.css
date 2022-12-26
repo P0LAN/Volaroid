@@ -7,9 +7,9 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #222222;
-  color: #F3EFE0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #202731;
+  color: white;
 }
 
 #Title {
@@ -17,51 +17,173 @@ body {
   font-size: 30px;
   align-content: left;
   margin: 10px 0px 10px 10px;
-  color: #22A39F;
+  color: #7289da;
 }
 
-ul {
-  top: 0; 
-  left: 0; 
-  z-index: 9999; 
-  width: 100%; 
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  list-style-type: none;
-  overflow: hidden;
-  background-color: #292828;
-}
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
-.Navbar {
-  margin: 20px 0px 10px 10px;
-}
 
-li {
-  float: left;
-}
 
-li a {
-  background-color: #292828;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  display: inline-block;
-  position: relative;
-  opacity: 0.6;
-  transition: 0.3s;
-}
-
-li a:hover {
-  border-radius: 10px;
-  background-color: black;
-  color: white;
-}
-
+  header a {
+    text-decoration: none;
+  }
+  
+  header {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    z-index: 9999; 
+    width: 100%; 
+    height: 100px;
+    padding: 0 20px;
+    background-color: #202731;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #brand {
+    margin: 20px;
+    font-weight: bold;
+    font-size: 30px;
+    align-items: center;
+  }
+  
+  #brand a {
+    color: #7289da;
+  }
+  
+  ul {
+    list-style: none;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  ul a {
+    margin-right: 20px;
+    color: white;
+  }
+  
+  ul li {
+    padding: 5px;
+    margin-left: 10px;
+  }
+  
+  ul li:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+  
+  #hamburger-icon {
+    margin-top: 10px;
+    margin-right: 30px;
+    display: none;
+    cursor: pointer;
+  }
+  
+  #hamburger-icon div {
+  
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+  }
+  
+  .open .bar2 {
+    opacity: 0;
+  }
+  
+  .open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+  }
+  
+  .open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .mobile-menu {
+    align-items: center;
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    height: calc(100vh - 50px);
+    width: 100%;
+  }
+  
+  .mobile-menu li {
+    height: 30px;
+    margin-right: 90px;
+    width: 1000px;
+    padding: 10px;
+    background-color: #202731;
+    align-items: center;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    header nav {
+      display: none;
+    }
+  
+    #hamburger-icon {
+      display: block;
+    }
+  
+    header {
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      z-index: 9999; 
+      width: 100%; 
+      height: 100px;
+      padding: 0 20px;
+      background-color: #202731;
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    #Title_Of_Project {
+      justify-content: center;
+      font-size: 100px;
+      background: #202731;
+      margin-top: 250px;
+      padding: 0;
+      color: #8FCB9B;
+  }
+  
+    #Subtitle {
+      font-size: 17px;
+      margin-bottom: 250px;
+    }
+  
+    #Equipment_volaroid {
+      margin-bottom: 250px;
+    }
+    
+    #Aim_volaroid {
+      margin-bottom: 250px;
+    }
+    
+    #Contribute_volaroid {
+      margin-bottom: 250px;
+    }
+    
+  }
+  
+  
 #Title_Of_Project {
-  color: #146e6b;
+  color: #7289da;
   font-size: 50px;
   margin-top: 250px;
 }
@@ -70,109 +192,30 @@ li a:hover {
   color: #222222;
 }
 
-#Link_Of_About {
-  color: #222222;
+#Subtitle {
   margin-bottom: 300px;
 }
 
-#About {
-  color: #146e6b;
+#Equipment {
+  color: #7289da;
 }
 
-#Link_Of_Aim {
-  color: #222222;
+#Equipment_volaroid {
   margin-bottom: 300px;
 }
 
 #Aim {
-  color: #146e6b;
+  color: #7289da;
 }
 
-#Link_Of_Purpose {
-  color: #222222;
+#Aim_volaroid {
   margin-bottom: 300px;
 }
 
-#Purpose {
-  color: #146e6b;
+#Contribute {
+  color: #7289da;
 }
 
-#Purpose_volaroid {
+#Contribute_volaroid {
   margin-bottom: 300px;
-}
-.rainbow-text {
-  /* Create a conic gradient. */
-  /* Double percentages to avoid blur (#000 10%, #fff 10%, #fff 20%, ...). */
-  background: #CA4246;
-  background-color: #CA4246;
-  font-size: 30px;
-  background: conic-gradient(
- 
-   
-    #6d3838 33.333%, 
-    #d88d53 33.333%, 
-    #146e6b 50%, 
-    #8B9862 50%, 
-    #8B9862 66.666%, 
-    #476098 66.666%, 
-    #476098 83.333%, 
-    #b390ae 83.333%);
-  
-  /* Set thee background size and repeat properties. */
-  background-size: 57%;
-  background-repeat: repeat;
-  
-  /* Use the text as a mask for the background. */
-  /* This will show the gradient as a text color rather than element bg. */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  
-  /* Animate the text when loading the element. */
-  /* This animates it on page load and when hovering out. */
-  animation: rainbow-text-animation-rev 0.5s ease forwards;
-
-  cursor: pointer;
-}
-
-/* Add animation on hover. */
-.rainbow-text:hover {
-  animation: rainbow-text-animation 0.5s ease forwards;
-}
-
-/* Move the background and make it larger. */
-/* Animation shown when hovering over the text. */
-@keyframes rainbow-text-animation {
-  0% {
-    background-size: 57%;
-    background-position: 0 0;
-  }
-  20% {
-    background-size: 57%;
-    background-position: 0 1em;
-  }
-  100% {
-    background-size: 300%;
-    background-position: -9em 1em;
-  }
-}
-
-/* Move the background and make it smaller. */
-/* Animation shown when entering the page and after the hover animation. */
-@keyframes rainbow-text-animation-rev {
-  0% {
-    background-size: 300%;
-    background-position: -9em 1em;
-  }
-  20% {
-    background-size: 57%;
-    background-position: 0 1em;
-  }
-  100% {
-    background-size: 57%;
-    background-position: 0 0;
-  }
-  big-text{
-   
-    font-size: 300px;
-  }
 }
