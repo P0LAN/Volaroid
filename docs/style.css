@@ -127,7 +127,7 @@ body {
     margin-right: 90px;
     width: 1000px;
     padding: 10px;
-    background-color: #202731;
+    background-color: #1e2124;
     align-items: center;
   }
   
@@ -148,7 +148,7 @@ body {
       width: 100%; 
       height: 100px;
       padding: 0 20px;
-      background-color: #202731;
+      background-color: 	#1e2124;
       display: flex;
       justify-content: space-between;
     }
@@ -156,7 +156,7 @@ body {
     #Title_Of_Project {
       justify-content: center;
       font-size: 100px;
-      background: #202731;
+      background: 	#1e2124;
       margin-top: 250px;
       padding: 0;
       color: #8FCB9B;
